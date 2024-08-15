@@ -2,13 +2,13 @@ import React, { useRef, useState, useEffect } from "react";
 import { ToastContainer, toast } from 'react-toastify';
 import { v4 as uuidv4 } from 'uuid';
 import 'react-toastify/dist/ReactToastify.css';
-import { useAuth } from "../contexts/AuthContext";
+
 
 const Manager = () => {
     const passwordRef = useRef();
     const [form, setForm] = useState({ site: "", username: "", password: "", showPassword: false });
     const [passwordArray, setPasswordArray] = useState([]);
-    const { API } = useAuth();
+    const API = "https://string-production.up.railway.app";
     
 
     useEffect(() => {
