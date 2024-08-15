@@ -7,8 +7,9 @@ const SignIn = () => {
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const { setIsAuthenticated, API } = useAuth();
+  const { setIsAuthenticated } = useAuth();
   const navigate = useNavigate();
+  const API = "https://string-production.up.railway.app";
   
 
   const handleSignIn = async (e) => {
