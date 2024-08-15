@@ -14,11 +14,11 @@ export const AuthProvider = ({ children }) => {
     localStorage.removeItem('token');
     setIsAuthenticated(false);
   };
-  const API = import.meta.env.VITE_URL;
+  
 
 
   return (
-    <AuthContext.Provider value={{ isAuthenticated, setIsAuthenticated, signOut, API }}>
+    <AuthContext.Provider value={{ isAuthenticated, setIsAuthenticated, signOut }}>
       {children}
     </AuthContext.Provider>
   );
